@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Servicio</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form [formGroup]="servicioForm" class="example-container">
+          <mat-form-field>
+            <input matInput formControlName="nombre" placeholder="Nombre">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="descripcion" placeholder="Descripción">
+          </mat-form-field>
+      </form>
+  </mat-card-content>
+  <mat-card-actions *ngIf="tipoServicio">
+    <button mat-button (click)="saveServicio()">Guardar</button>
+    <button mat-button (click)="resetForm()">Cancelar</button>
+  </mat-card-actions>
+</mat-card>

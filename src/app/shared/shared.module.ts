@@ -1,24 +1,36 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
-import {MatButtonModule, MatGridListModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule,
+  MatToolbarModule
+} from '@angular/material';
+import { FormularioServicioComponent } from './components/formulario-servicio/formulario-servicio.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    LayoutModule,
     MatGridListModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    ReactiveFormsModule,
   ],
   exports: [
-    LayoutModule,
     MatGridListModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    FormularioServicioComponent, ServiciosComponent
   ],
-  declarations: []
+  declarations: [FormularioServicioComponent, ServiciosComponent]
 })
 export class SharedModule { }

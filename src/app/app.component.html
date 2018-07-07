@@ -1,10 +1,16 @@
 <mat-toolbar color="primary" class="example-toolbar">
   <mat-toolbar-row>
     <span class="example-spacer"></span>
-    <button mat-button>Todos</button>
-    <button mat-button>Autos</button>
-    <button mat-button>Salud</button>
-    <button mat-button>Hogar</button>
+    <button mat-button (click)="filter()">Todos</button>
+    <button *ngFor="let ts of tipoServicios" (click)="filter(ts.codigo)" mat-button>{{ ts.nombre }}</button>
   </mat-toolbar-row>
 </mat-toolbar>
+<div fxLayout="row">
+  <div fxFlex="70">
+    <servicios [servicios]="serviciosFiltered" (updateServicio)="setServicioToForm($event)"></servicios>
+  </div>
+  <div fxFlex="30">
+    <formulario-servicio [tipoServicio]="tipoServicioSelected"></formulario-servicio>
+  </div>
+</div>
 

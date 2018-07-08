@@ -19,7 +19,6 @@ export class FormularioServicioComponent implements OnInit {
 
   @Input() set tipoServicio(tipoServicio) {
     this._tipoServicio = tipoServicio;
-    console.log(this.tipoServicio);
     this.enableOrDisableForm();
   }
 
@@ -62,7 +61,6 @@ export class FormularioServicioComponent implements OnInit {
   resetForm() {
     if (this.servicioForm) {
       this.servicioForm.reset({codigo: null, tipo_servicio: this.tipoServicio ? this.tipoServicio : null});
-      console.log(this.servicioForm.getRawValue());
     }
   }
 

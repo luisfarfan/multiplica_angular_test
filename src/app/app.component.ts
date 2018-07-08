@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, ViewChildren} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {TIPO_SERVICIOS} from './const';
 import {IServicio} from './core/interfaces/servicios';
 import {ServiciosService} from './core/services/servicios';
@@ -40,6 +40,5 @@ export class AppComponent implements OnInit {
       this.tipoServicioSelected = null;
       this.serviciosFiltered = this.serviciosAll;
     }
-    // this.formularioServicioComponent.resetForm();
   }
 }

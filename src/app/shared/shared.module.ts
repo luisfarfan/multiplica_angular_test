@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
+    LayoutModule,
     MatGridListModule,
     MatToolbarModule,
     MatIconModule,
@@ -29,6 +30,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
+    ReactiveFormsModule,
     FormularioServicioComponent, ServiciosComponent
   ],
   declarations: [FormularioServicioComponent, ServiciosComponent]
